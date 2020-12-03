@@ -1,16 +1,16 @@
 //Test Suite
 const countFiles = async (path, str, count) => {
-  let response = await axios.get(`http://localhost:5782/api/count?path=${path}&str=${str}&count=${count}`)
+  let response = await axios.get(`http://localhost:3990/api/count?path=${path}&str=${str}&count=${count}`)
   return response.data
 },
 
 checkFiles = async (pathArr, strArr) => {
-  let response = await axios.post(`http://localhost:5782/api/check`, {pathArr, strArr})
+  let response = await axios.post(`http://localhost:3990/api/check`, {pathArr, strArr})
   return response.data
 },
 
 searchFiles = async (pathArr, strArr) => {
-  let response = await axios.post(`http://localhost:5782/api/search`, {pathArr, strArr})
+  let response = await axios.post(`http://localhost:3990/api/search`, {pathArr, strArr})
   return response.data
 }
 
